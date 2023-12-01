@@ -1,0 +1,6 @@
+On each line of the document the calbriation value can be found by combining the first 
+and last digit in that order to form a single 2 digity number 
+
+
+iterate through each list of words and then if the a number is found then we apend in order
+if only 1 number is found then we produce that number twice to make the calbiration value 
