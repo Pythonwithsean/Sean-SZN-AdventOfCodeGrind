@@ -1,7 +1,5 @@
 const fs = require("fs");
-
 const filePath = "data.txt";
-const outputFilePath = "nums.txt"; // New file for concatenated strings
 
 fs.readFile(filePath, "utf8", (err, data) => {
   if (err) {
@@ -79,9 +77,6 @@ fs.readFile(filePath, "utf8", (err, data) => {
     let lineConcatenation = String(firstNumber) + String(lastNumber);
     concatenatedStrings.push(lineConcatenation);
 
-    // Write the concatenated string to "numbers.txt"
-    fs.appendFileSync(outputFilePath, lineConcatenation + "\n");
-
     console.log(
       `Line ${
         i + 1
@@ -90,5 +85,7 @@ fs.readFile(filePath, "utf8", (err, data) => {
     console.log("---");
   }
 
-  console.log("Concatenated strings written to numbers.txt");
+  // Calculate and print the sum
+  let sum = concatenatedStrings.reduce((acc, str) => acc + parseInt(str), 0);
+  console.log(`Sum of concatenated string values: ${sum}`);
 });
