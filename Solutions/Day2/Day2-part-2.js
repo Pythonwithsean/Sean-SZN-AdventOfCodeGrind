@@ -8,7 +8,7 @@ fs.readFile(pathName, (err, data) => {
   } else {
     data = data.toString().replace(/\r/g, "");
     const lines = data.split("\n");
-    let totalMulti = 0; // Initialize the variable to store the cumulative sum
+    let totalMulti = 0;
 
     for (let i = 0; i < lines.length; i++) {
       result = [];
